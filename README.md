@@ -147,6 +147,38 @@ The [peering connection](https://docs.aws.amazon.com/vpc/latest/peering/what-is-
 
 Load balancers are necessary for the distribution of traffic between the instances that make up the auto-scaling group (something that provides high availability and therefore strengthens the infrastructure). The [load balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html) is defined as network type since the instances of the autoscaling group are not for web services, they are not public, they are designed to do workloads too heavy for a web application.
 
+### Some changes you will have to make 
+
+In the `main.tf` file of the `route53` module you must modify where it says `PUT HERE YOUR DOMAIN NAME` and `DOMAIN NAME HERE` for your domain name.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/110245293/229319990-02c8c945-d75b-49f9-9cb4-eef227590dc9.png">
+</p>
+
+In the `main.tf` file of the `inspector` module you must modify where it says `YOUR ACCOUNT ID`
+ for your account ID.
+ 
+ <p align="center">
+  <img src="https://user-images.githubusercontent.com/110245293/229320032-e7e4be43-3e18-43cf-a6a2-9d1c1d30444b.png">
+</p>
+ 
+In the `main.tf` file of the `modules/instances` and `modules/secondary/instances` modules you must modify where it says `NAME OF YOUR KEY` by the name of the document of your password.
+
+ <p align="center">
+  <img src="https://user-images.githubusercontent.com/110245293/229320103-c1f7ae64-6d7b-461e-a27a-a4650cbd5a70.png">
+</p>
+
+ <p align="center">
+  <img src="https://user-images.githubusercontent.com/110245293/229320449-b1d583b8-74d3-4531-831a-81d9be156459.png">
+</p>
+
+In the `main.tf` of the module `s3`. You must change where it says `Write your bucket name` by the name you want to put in your bucket (this name must be unique).
+
+ <p align="center">
+  <img src="https://user-images.githubusercontent.com/110245293/229320199-51731785-cf4c-4b82-8589-329d24edcd16.png">
+</p>
+
+All the variables are defined by default, so it is not necessary to touch anything in the file t2medium.tfvars but, in case you want to change the default variables you must do it correctly and initialize all the corresponding variables, the ones in the file are as an example.
 
 ## Let's look the main VPC
 
