@@ -423,3 +423,8 @@ When working in layer 4 of the OSI model we no longer work with HTTP/HTTPS proto
 
 :stop_sign: This is the error you should see if you have no server or application running.
 
+## Built with 🛠️
+
+* [VSC](https://code.visualstudio.com/)
+* [Terraform](https://www.terraform.io/)
+* [AWS](https://aws.amazon.com/)
