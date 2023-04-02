@@ -86,6 +86,13 @@ There are different ways to do it, if you decide to do it in another way that is
 
 :dart: Another important aspect is the configuration of the Terraform CLI. [Here you have the official documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
+:dart: To run the program it is only necessary to apply the following commands in the CLI:
+
+- [x] [`terraform init`](https://developer.hashicorp.com/terraform/cli/commands/init)
+- [x] [`terraform apply`](https://developer.hashicorp.com/terraform/cli/commands/apply)
+
+Anyway [here](https://developer.hashicorp.com/terraform/cli/commands) you have an extensive explanation of the different terraform commands.
+
 :cyclone: With all this we should already have the environment prepared. So let's jump to the next step.
 
 ### And why these services?
@@ -422,6 +429,8 @@ When working in layer 4 of the OSI model we no longer work with HTTP/HTTPS proto
 </p>
 
 :stop_sign: This is the error you should see if you have no server or application running.
+
+:dart: It has already been mentioned but for the proper functioning of any cloud infrastructure, we must give the minimum necessary permissions to each user. In this case we could narrow down some permissions since I have limited myself to put FullAccess to all the services that I needed. It is a question of the use that each one wants to give in the implementation of the infrastructure.
 
 ## Built with 🛠️
 
