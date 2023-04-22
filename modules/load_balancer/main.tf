@@ -71,7 +71,7 @@ resource "aws_lb_listener" "lb-listener"{
     load_balancer_arn = aws_lb.app-lb.arn
     protocol = "HTTPS"
     port = var.lb-port
-    certificate_arn = "arn:aws:acm:eu-west-2:548305448673:certificate/5fa73d92-3cd5-43ff-b95b-125737e7c827"
+    certificate_arn = "your certificate"
 
     default_action {
       target_group_arn = aws_lb_target_group.lb-target-group.arn
